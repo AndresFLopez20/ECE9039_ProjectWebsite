@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AndresFLopez20/ECE9039_ProjectWebsite.git/static/css/main.c556b199.css",
+    "main.js": "/AndresFLopez20/ECE9039_ProjectWebsite.git/static/js/main.54b4d633.js",
+    "static/js/453.1b6cbde4.chunk.js": "/AndresFLopez20/ECE9039_ProjectWebsite.git/static/js/453.1b6cbde4.chunk.js",
+    "index.html": "/AndresFLopez20/ECE9039_ProjectWebsite.git/index.html",
+    "main.c556b199.css.map": "/AndresFLopez20/ECE9039_ProjectWebsite.git/static/css/main.c556b199.css.map",
+    "main.54b4d633.js.map": "/AndresFLopez20/ECE9039_ProjectWebsite.git/static/js/main.54b4d633.js.map",
+    "453.1b6cbde4.chunk.js.map": "/AndresFLopez20/ECE9039_ProjectWebsite.git/static/js/453.1b6cbde4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c556b199.css",
+    "static/js/main.54b4d633.js"
+  ]
+}
