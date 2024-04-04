@@ -43,11 +43,15 @@ def analyze_medical_data(data):
     accuracy = accuracy_score(y_test, y_pred)
     print("Accuracy:", accuracy)
 
+
     # Return the result based on the prediction
     if result[0] == 0:
-        return "You have cancer."
+        print("Cancer")
+        return "Cancer"
     else:
-        return "You do not have cancer."
+        print("healthy")
+
+        return "Healthy"
 
 # Create a Flask app
 app = Flask(__name__)

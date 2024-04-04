@@ -1,5 +1,8 @@
 // MedicalForm.js
 
+import cancerImage from './assets/sad.png';
+import noCancerImage from './assets/happy.png';
+
 import React, { useState } from 'react';
 import './MedicalForm.css';
 
@@ -43,7 +46,7 @@ const MedicalForm = () => {
     event.preventDefault();
     setLoading(true);
     try {
-      console.log(formData)
+      // console.log(formData)
       const response = await fetch('http://127.0.0.1:5000/submit', {
         method: 'POST',
         headers: {
@@ -65,7 +68,7 @@ const MedicalForm = () => {
 
   return (
     <div className="container">
-      <h1>Welcome to our Medical Website</h1>
+      <h1>Welcome to our Lung Cancer Predictor</h1>
       <p>Please fill out the following information:</p>
       <form onSubmit={handleSubmit}>
         <label>Gender:</label>
@@ -134,7 +137,29 @@ const MedicalForm = () => {
           {loading ? 'Calculating your results...' : 'Submit'}
         </button>
       </form>
-      {resultString && <div>Result: {resultString}</div>}
+      {resultString && (
+        <div className='results'>
+          {resultString === "Cancer" ? (
+            <div className='results-content'>
+              <img src={cancerImage} alt="Cancer" className='results-image' />
+              <div className='results-text'>
+                <h2>Prediction Results:</h2>
+                <p>Based on our model, we suggest you seek a healthcare professional</p>
+              </div>
+            </div>
+          ) : (
+            <div className='results-content'>
+              <img src={noCancerImage} alt="No Cancer" className='results-image'/>
+              <div className='results-text'>
+                <div>
+                  <h2>Prediction Results:</h2>
+                  <p>Based on our model, we predict that you do not have lung cancer!</p>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
